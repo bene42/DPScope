@@ -1,5 +1,5 @@
 from serial.tools.list_ports import comports
-from Tkinter import *
+from tkinter import *
 
 def get_port(parent):
     dialog = Toplevel(parent)

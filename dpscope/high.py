@@ -1,7 +1,7 @@
 from low import DPScope
 from numpy.fft import fft
 from multiprocessing.pool import ThreadPool
-from Tkinter import BooleanVar
+from tkinter import BooleanVar
 from threading import Semaphore
 
 def channels(data):

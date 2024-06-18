@@ -7,7 +7,7 @@ except ImportError:
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from portselect import get_port
-from Tkinter import *
+from tkinter import *
 
 import high
 
