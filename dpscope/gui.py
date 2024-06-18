@@ -1,6 +1,10 @@
 import matplotlib
 matplotlib.use('TkAgg')
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+try:
+    from matplotlib.backends.backend_tkagg import NavigationToolbar2TkAgg
+except ImportError:
+    from matplotlib.backends.backend_tkagg import NavigationToolbar2Tk as NavigationToolbar2TkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from portselect import get_port
 from Tkinter import *
@@ -41,7 +45,7 @@ def stop():
 
 # the plot
 canvas = FigureCanvasTkAgg(fig, master=root)
-canvas.show()
+canvas.draw()
 canvas.get_tk_widget().pack(fill=BOTH, expand=1, side=LEFT)
 
 # the controls
